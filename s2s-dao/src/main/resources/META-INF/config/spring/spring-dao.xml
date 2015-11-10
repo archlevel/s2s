@@ -48,21 +48,21 @@
 		init-method="init">
 		<property name="prefix" value="s2s_db" />
 	</bean>
-	<bean id="s2sSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
+	<bean id="s2sSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
  		<property name="dataSource" ref="s2s_db" />
  	</bean>
 	<bean id="s2s_db_slave" class="com.tower.service.datasource.DynamicDataSource"
 		init-method="init">
 		<property name="prefix" value="s2s_db_slave" />
 	</bean>
-	<bean id="s2sSlaveSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
+	<bean id="s2sSlaveSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
  		<property name="dataSource" ref="s2s_db_slave" />
  	</bean>
 	<bean id="s2s_db_map_query" class="com.tower.service.datasource.DynamicDataSource"
 		init-method="init">
 		<property name="prefix" value="s2s_db_map_query" />
 	</bean>
-	<bean id="s2sMapQuerySqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
+	<bean id="s2sMapQuerySessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
  		<property name="dataSource" ref="s2s_db_map_query" />
  	</bean>
 	
