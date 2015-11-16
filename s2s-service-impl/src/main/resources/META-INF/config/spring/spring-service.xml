@@ -66,12 +66,8 @@
     <!--服务注册信息请在该备注以下添加-->
     
     <!-- 声明需要暴露的服务接口 -->
-    <!--
-    <dubbo:service interface="com.oimboi.service.s2s.IXxxService" ref="xxxService"/>
-    -->
+    <dubbo:service interface="com.oimboi.service.s2s.IHello" ref="helloService"/>
     <!-- 和本地bean一样实现服务 -->
-    <!--
-    <bean id="xxxService" class="com.oimboi.service.s2s.impl.XxxServiceImpl"/>
-    -->
+    <bean id="helloService" class="com.oimboi.service.s2s.HelloImpl"/>
     
 </beans>
