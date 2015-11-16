@@ -7,7 +7,7 @@ target/
 *.iml
 .settings/
 .svn/
-
+.DS_Store
 Servers/
 
 # Package Files #
