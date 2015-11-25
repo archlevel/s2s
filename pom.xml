@@ -7,7 +7,7 @@
 	<artifactId>s2s</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<issueManagement>
 		<url>http://gitlab.corp.kjt.com/_code_java/s2s/issues</url>
 		<system>GitHub Issues</system>
@@ -24,9 +24,9 @@
 		<connection>scm:git:git@github.com:archlevel/s2s.git</connection>
 		<developerConnection>scm:git:git@github.com:archlevel/s2s.git</developerConnection>
 		<url>git@github.com:archlevel/s2s.git</url>
-	  	<tag>HEAD</tag>
-  	</scm>
-	
+		<tag>HEAD</tag>
+	</scm>
+
 	<developers>
 		<developer>
 			<name>朱拱平</name>
@@ -35,18 +35,18 @@
 			<organizationUrl>http://www.sonatype.com</organizationUrl>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
+
 		<memcached.version>2.0.1</memcached.version>
 		<mybatis.version>3.2.8</mybatis.version>
 		<mysql.version>5.1.26</mysql.version>
 		<mail.version>1.4.1</mail.version>
 		<jedis.version>2.6.2</jedis.version>
-		<junit.version>4.7</junit.version>
+		<junit.version>4.11</junit.version>
 		<json-lib.version>2.2.3</json-lib.version>
-		<spring.version>4.0.7.RELEASE</spring.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
 		<hessian.version>4.0.7</hessian.version>
 		<sqljdbc4.version>4.0</sqljdbc4.version>
 		<slf4j.version>1.7.5</slf4j.version>
@@ -67,20 +67,20 @@
 		<dubbo.version>2.8.4</dubbo.version>
 		<zookeeper.version>3.4.6</zookeeper.version>
 		<zkclient.version>0.4</zkclient.version>
-		
+
 		<soafw-common.version>2.2.3-SNAPSHOT</soafw-common.version>
 
-        <!-- 异常代码生成公共定义 -->
-        <exception.enum.class></exception.enum.class>
-        <exception.loadType>DB</exception.loadType>
-        <exception.tableName>soa_exception</exception.tableName>
-        <exception.dburl>jdbc:mysql://maven.oimboi.com:3306/soafw_db</exception.dburl>
-        <exception.dbuser>root</exception.dbuser>
-        <exception.dbpwd>oimboi@)!$</exception.dbpwd>
-        <exception.level></exception.level>
-        <spId>1</spId>
-        <!-- 异常代码生成公共定义 -->
-        <!-- plugins version -->
+		<!-- 异常代码生成公共定义 -->
+		<exception.enum.class></exception.enum.class>
+		<exception.loadType>DB</exception.loadType>
+		<exception.tableName>soa_exception</exception.tableName>
+		<exception.dburl>jdbc:mysql://maven.oimboi.com:3306/soafw_db</exception.dburl>
+		<exception.dbuser>root</exception.dbuser>
+		<exception.dbpwd>oimboi@)!$</exception.dbpwd>
+		<exception.level></exception.level>
+		<spId>1</spId>
+		<!-- 异常代码生成公共定义 -->
+		<!-- plugins version -->
 		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
 		<maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
@@ -101,61 +101,61 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-util</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-config</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-cache</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-dao</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-mq</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-rpc</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>      
-	            <artifactId>tower-domain</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-service</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-job</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>com.tower.soafw</groupId>
-	            <artifactId>tower-service-impl</artifactId>
-	            <version>${soafw-common.version}</version>
-	        </dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-util</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-config</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-cache</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-dao</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-mq</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-rpc</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-domain</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-service</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-job</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tower.soafw</groupId>
+				<artifactId>tower-service-impl</artifactId>
+				<version>${soafw-common.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.tower.soafw</groupId>
 				<artifactId>tower-web</artifactId>
 				<version>${soafw-common.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.oimboi.service.s2s</groupId>
 				<artifactId>s2s-util</artifactId>
@@ -332,6 +332,21 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-cql</artifactId>
+				<version>1.2.2.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>4.2.0.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
@@ -343,6 +358,11 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
@@ -407,7 +427,7 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-			
+
 			<!-- zookeeper -->
 			<dependency>
 				<groupId>org.apache.zookeeper</groupId>
@@ -420,7 +440,7 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-	
+
 			<!-- zkClient -->
 			<dependency>
 				<groupId>com.101tec</groupId>
@@ -463,34 +483,16 @@
 					</execution>
 				</executions>
 			</plugin>
-            <!-- 异常代码生成插件 -->
-            <!-- 
-            <plugin>
-                <groupId>com.tower.soafw</groupId>
-                <artifactId>tower-exception-gen-maven-plugin</artifactId>
-                <version>${soafw-common.version}</version>
-                <configuration>
-                    <exceptionEnumClass>${exception.enum.class}</exceptionEnumClass>
-                    <dbpwd>${exception.dbpwd}</dbpwd>
-                    <dburl>${exception.dburl}</dburl>
-                    <dbuser>${exception.dbuser}</dbuser>
-                    <tableName>${exception.tableName}</tableName>
-                    <loadType>${exception.loadType}</loadType>
-                    <exceptionLevel>${exception.level}</exceptionLevel>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>exception-generator</id>
-                        <goals>
-                            <goal>gen</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
-            <!-- 单元测试框架代码生成插件 -->
-            <plugin>
+			<!-- 异常代码生成插件 -->
+			<!-- <plugin> <groupId>com.tower.soafw</groupId> <artifactId>tower-exception-gen-maven-plugin</artifactId> 
+				<version>${soafw-common.version}</version> <configuration> <exceptionEnumClass>${exception.enum.class}</exceptionEnumClass> 
+				<dbpwd>${exception.dbpwd}</dbpwd> <dburl>${exception.dburl}</dburl> <dbuser>${exception.dbuser}</dbuser> 
+				<tableName>${exception.tableName}</tableName> <loadType>${exception.loadType}</loadType> 
+				<exceptionLevel>${exception.level}</exceptionLevel> </configuration> <executions> 
+				<execution> <id>exception-generator</id> <goals> <goal>gen</goal> </goals> 
+				<phase>generate-sources</phase> </execution> </executions> </plugin> -->
+			<!-- 单元测试框架代码生成插件 -->
+			<plugin>
 				<groupId>com.tower.soafw</groupId>
 				<artifactId>tower-test-maven-plugin</artifactId>
 				<version>${soafw-common.version}</version>
@@ -520,7 +522,8 @@
 						<tagNameFormat>v@{project.version}</tagNameFormat>
 					</configuration>
 				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>

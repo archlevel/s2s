@@ -17,7 +17,13 @@
 	
 	<context:component-scan base-package="com.tower.service.impl" />
 	
-	<context:component-scan base-package="com.oimboi.service.s2s" />
+	<context:component-scan base-package="com.oimboi.service.s2s.impl" />
+	
+	<!-- 激活组件扫描功能,在包com.oimboi.service.s2s.aop及其子包下面自动扫描通过注解配置的组件 -->
+	<context:component-scan base-package="com.oimboi.service.s2s.aop" />
+	<!-- 激活自动代理功能 -->
+	<!-- 启用@AspectJ 支持 -->
+	<aop:aspectj-autoproxy />
 	
 	<!--框架配置：该import设置请不要轻易改变-->
 	<import resource="classpath*:/META-INF/config/spring/spring-dao.xml"/>
@@ -68,6 +74,6 @@
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.oimboi.service.s2s.IHello" ref="helloService"/>
     <!-- 和本地bean一样实现服务 -->
-    <bean id="helloService" class="com.oimboi.service.s2s.HelloImpl"/>
+    <bean id="helloService" class="com.oimboi.service.s2s.impl.HelloImpl"/>
     
 </beans>
