@@ -86,7 +86,7 @@ public class CodeIbatisDAOImpl extends AbsIntIDIBatisDAOImpl<Code> implements IC
     	
     	validate(model);
     	
-    	model.setTKjtTabName(this.get$TKjtTabName(tabNameSuffix));
+    	model.setTowerTabName(this.get$TowerTabName(tabNameSuffix));
     
     	SqlSessionFactory sessionFactory = this.getMasterSessionFactory();
 	    SqlSession session = SqlmapUtils.openSession(sessionFactory);

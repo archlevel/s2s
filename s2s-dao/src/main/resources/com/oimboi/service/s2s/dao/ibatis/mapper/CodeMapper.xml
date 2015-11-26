@@ -246,7 +246,7 @@
 		SELECT
 			<include refid="Column_List_Base_Gen" />
 		FROM
-			${tKjtTabName}
+			${TowerTabName}
 		<where>
 			<include refid="Where_Clause_Id_Gen" />
 		</where>
@@ -257,7 +257,7 @@
 		SELECT
 			<include refid="Column_List_Base_Gen" />
 		FROM
-			${tKjtTabName}
+			${TowerTabName}
 		<where>
 			<include refid="Where_Clause_Normal_Gen" />
 		</where>
@@ -268,7 +268,7 @@
 		SELECT
 			<include refid="Column_List_Id_Gen" />
 		FROM
-			${tKjtTabName}
+			${TowerTabName}
 		<where>
 			<include refid="Where_Clause_Normal_Gen" />
 		</where>
@@ -279,7 +279,7 @@
 		SELECT
 			count(*)
 		FROM
-			${tKjtTabName}
+			${TowerTabName}
 		<where>
 			<include refid="Where_Clause_Normal_Gen" />
 		</where>
@@ -289,7 +289,7 @@
 		SELECT
 			<include refid="Column_List_Base_Gen" />
 		FROM
-			${params.tKjtTabName}
+			${params.TowerTabName}
 		<where>
 			<if test="params !=  null">
 				<include refid="Where_Clause_Params_Gen" />
@@ -299,7 +299,7 @@
 	</select>
 	
 	<insert id="insert" parameterType="com.oimboi.service.s2s.dao.model.Code" useGeneratedKeys="true" keyProperty="id">
-		INSERT INTO	${tKjtTabName}
+		INSERT INTO	${TowerTabName}
 		(
 		<trim suffix="" suffixOverrides=",">
 			<if test="id !=null">
@@ -372,7 +372,7 @@
 	
 	<update id="updateById" parameterType="java.util.Map">
 		update 
-			${tKjtTabName}
+			${TowerTabName}
 		<set>
 			<include refid="Update_Set_Normal_Gen" />
 		</set>
@@ -383,7 +383,7 @@
 	
 	<update id="cmplxUpdate" parameterType="java.util.Map">
 		update 
-			${tKjtTabName}
+			${TowerTabName}
 		<set>
 			<include refid="Update_Set_NewObj_Gen" />
 		</set>
@@ -395,7 +395,7 @@
 	<delete id="deleteByMap" parameterType="java.util.Map">		
 		DELETE
 		FROM
-			${tKjtTabName} 
+			${TowerTabName} 
 		<where>
 			<include refid="Where_Clause_Id_Gen" />
 		</where>
@@ -403,7 +403,7 @@
 	
 	<insert id="batchInsert" parameterType="java.util.Map" useGeneratedKeys="true" keyProperty="id">
 		insert into 
-			${tKjtTabName}  
+			${TowerTabName}  
 			( 
 		<foreach collection="batchInsertCols" item="batchInsertCol" index="index" separator=",">
 			<trim suffix="" suffixOverrides=",">
@@ -457,7 +457,7 @@
 	
 	<update id="batchUpdate" parameterType="java.util.Map">
 		update 
-			${tKjtTabName}
+			${TowerTabName}
 		<set>
 			<include refid="Update_Set_NewObj_Gen" />
 		</set>
@@ -469,7 +469,7 @@
 	<delete id="batchDelete"  parameterType="java.util.Map">
 		delete 
 		from
-			${tKjtTabName}
+			${TowerTabName}
 		<where>
 			<include refid="Where_Clause_Batch_Gen" />
 		</where>
@@ -479,7 +479,7 @@
 		select 
 			<include refid="Column_List_Base_Gen" />
 		from
-			${tKjtTabName}
+			${TowerTabName}
 		<where>
 			<include refid="Where_Clause_Batch_Gen" />
 		</where>
