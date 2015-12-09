@@ -94,7 +94,7 @@ public class CodeIbatisDAOImpl extends AbsIntIDIBatisDAOImpl<Code> implements IC
       		IIMapper<Code> mapper = session.getMapper(getMapperClass());
       		Long id = mapper.insert(model);
       		if (id !=null) {
-        		this.incrTabVersion(tabNameSuffix);
+      			this.incrTabVersion(CallFrom_PK,tabNameSuffix);
       		}
 
       		if (logger.isDebugEnabled()) {

@@ -5,7 +5,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.interceptor.TransactionInterceptor;
 
 import com.tower.service.AccessLoger;
 
@@ -18,8 +17,9 @@ public class LogAspect {
      * 定义Pointcut，Pointcut的名称为aspectjMethod()，此方法没有返回值和参数 
      * 该方法就是一个标识，不进行调用 
      */  
-    @Pointcut("execution(* com.oimboi.service.s2s.impl.*.*(..))")  
+    @Pointcut("execution(* com.oimboi.service.s2s.*.*(..))")  
     private void aspectjMethod(){};
+    
     /**
      * execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?
      * name-pattern(param-pattern)throws-pattern?) returning type pattern,name pattern, and parameters
@@ -30,7 +30,6 @@ public class LogAspect {
      */
     @Around(value = "aspectjMethod()")
     public Object processAround(ProceedingJoinPoint pjp) throws Throwable {
-    	TransactionInterceptor a;
       return AccessLoger.process(pjp);
     }
 }

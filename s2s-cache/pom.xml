@@ -19,10 +19,6 @@
 			<groupId>com.tower.soafw</groupId>
 			<artifactId>tower-cache</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.oimboi.service.s2s</groupId>
-			<artifactId>s2s-config</artifactId>
-		</dependency>
 		
 		<dependency>
 			<groupId>junit</groupId>

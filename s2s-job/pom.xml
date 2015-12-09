@@ -35,11 +35,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
 		
 		<!-- dubbo -->
 		<dependency>
@@ -95,7 +90,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.oimboi.service.s2s.job.Startup</mainClass>
+							<mainClass>com.oimboi.service.s2s.Startup</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

@@ -5,7 +5,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.interceptor.TransactionInterceptor;
 
 import com.tower.service.AccessLoger;
 
@@ -20,6 +19,7 @@ public class LogAspect {
      */  
     @Pointcut("execution(* com.oimboi.service.s2s.*.*(..))")  
     private void aspectjMethod(){};
+    
     /**
      * execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?
      * name-pattern(param-pattern)throws-pattern?) returning type pattern,name pattern, and parameters
@@ -30,7 +30,6 @@ public class LogAspect {
      */
     @Around(value = "aspectjMethod()")
     public Object processAround(ProceedingJoinPoint pjp) throws Throwable {
-    	TransactionInterceptor a;
       return AccessLoger.process(pjp);
     }
 }

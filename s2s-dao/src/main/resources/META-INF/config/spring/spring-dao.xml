@@ -68,11 +68,13 @@
 	<bean id="s2sMapQuerySessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
  		<property name="dataSource" ref="s2s_db_map_query" />
  	</bean>
-	
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+ 	<!-- enable the configuration of transactional behavior based on annotations -->
+ 	<!--
+ 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 	    <property name="dataSource" ref="s2s_db"/>
 	</bean>
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
-
+ 	-->
+	
 </beans>

@@ -31,16 +31,6 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>com.oimboi.service.s2s</groupId>
-			<artifactId>s2s-rpc</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.oimboi.service.s2s</groupId>
-			<artifactId>s2s-mq</artifactId>
-		</dependency>
-		
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
